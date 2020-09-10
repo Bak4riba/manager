@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 function Home() {
   return (
-    'Eae corno'
+    <div>TEste</div>
   );
 }
 export default memo(Home);

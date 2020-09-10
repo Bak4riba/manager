@@ -2,7 +2,6 @@ import React from 'react';
 import { ThemeProvider, createMuiTheme, CssBaseline, } from '@material-ui/core';
 import { BrowserRouter as Router } from 'react-router-dom'
 import Menu from './components/ui/Menu'
-
 function App() {
   const theme = createMuiTheme({
     palette: {
