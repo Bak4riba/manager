@@ -1,33 +1,36 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { TextField, Typography } from '@material-ui/core';
 import Table from '../../ui/Table'
-
-
-
-const useStyles = makeStyles((theme) => ({
-
-}));
+import Form from './Form'
 
 export default function Material() {
-  const classes = useStyles();
+  const columns = [
+    {
+      label: 'Nome',
+      name: 'name'
+    }
+  ]
+
+  const data = [
+    {
+      name: 'Leandro'
+    },
+    {
+      name: 'Corno'
+    },
+    {
+      name: 'Viadão'
+    }
+  ]
 
   return (
-    <div className="divdoida">
-      <form className={classes.root} noValidate autoComplete="off">
-        <div>
-          <Typography variant='h5'>Cadastro de Materiais</Typography>
-          <TextField
-            className={classes.Textfield}
-            id="outlined-basic"
-            label="Nome"
-            variant="outlined"
-          />
-        </div>
-      </form>
-      <div>
-        <Table />
-      </div>
+    <div>
+      <Table
+        title="Materiais"
+        singular="Material"
+        data={data}
+        columns={columns}
+        form={Form} />
     </div>
+
   );
 }
